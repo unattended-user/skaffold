@@ -1,0 +1,13 @@
+os: linux
+dist: bionic
+language: shell
+git:
+  quiet: true
+stages:
+  - name: build_docker
+jobs:
+  include:
+    - name: Trigger docker build
+      stage: build_docker
+      script:
+        - curl -X https://hub.docker.com/api/build/v1/source/${PROJECT_ID}/trigger/${WEBHOOK_ID}/call/
