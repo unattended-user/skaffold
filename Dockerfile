@@ -1,4 +1,4 @@
-FROM docker
+FROM alpine
 
 ## Basic shell setup
 RUN apk add --no-cache \
