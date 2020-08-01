@@ -10,4 +10,4 @@ jobs:
     - name: Trigger docker build
       stage: build_docker
       script:
-        - curl -X https://hub.docker.com/api/build/v1/source/${PROJECT_ID}/trigger/${WEBHOOK_ID}/call/
+        - curl -X POST https://hub.docker.com/api/build/v1/source/${PROJECT_ID}/trigger/${WEBHOOK_ID}/call/
