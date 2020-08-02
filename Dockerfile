@@ -12,9 +12,6 @@ RUN apk add --no-cache \
         curl \
         git
 
-## Docker autocomplete
-RUN curl https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/bash/docker -o /usr/share/bash-completion/completions/docker
-
 ## Install kubectl
 RUN curl -L -o /tmp/kubectl "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl" && \
     install /tmp/kubectl /usr/local/bin/ && \
