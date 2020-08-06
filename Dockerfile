@@ -26,6 +26,10 @@ RUN curl -L -o /tmp/helm.tar.gz "https://get.helm.sh/helm-$(git ls-remote --tags
     rm -R /tmp/linux-amd64 && \
     helm completion bash > /usr/share/bash-completion/completions/helm
 
+## Instal container structure test
+RUN curl -L -o /tmp/container-structure-test "https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64" && \
+    install /tmp/container-structure-test /usr/local/bin/ && \
+    rm /tmp/container-structure-test
 
 ## Install skaffold
 RUN curl -L -o /tmp/skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
