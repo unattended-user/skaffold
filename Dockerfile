@@ -9,6 +9,7 @@ CMD bash
 
 ## Install
 RUN apk add --no-cache \
+        jq \
         curl \
         git
 
