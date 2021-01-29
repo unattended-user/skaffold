@@ -36,4 +36,5 @@ RUN curl -L -o /tmp/container-structure-test "https://storage.googleapis.com/con
 RUN curl -L -o /tmp/skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
     install /tmp/skaffold /usr/local/bin/ && \
     rm /tmp/skaffold && \
-    skaffold completion bash > /usr/share/bash-completion/completions/skaffold
+    skaffold completion bash > /usr/share/bash-completion/completions/skaffold && \
+    skaffold config set --global collect-metrics false
